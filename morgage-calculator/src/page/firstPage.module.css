@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 }
 
 .firstpage {
@@ -10,7 +10,7 @@
 }
 .innerFirstpage {
   width: 63%;
-  /* height: 77%; */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,14 +23,90 @@
   height: 100%;
   background-color: hsl(0 0% 100% / 1);
   border-radius: 1.5rem 0 0 1.5rem;
-  /* padding: 32px 24px; */
+
 }
 
 .result {
   width: 50%;
-  /* height: 100%; */
+
   background-color: rgb(19 48 64);
   border-radius: 0 1.5rem 1.5rem 75px;
   padding: 4.5rem 2.5rem;
+}
+ */
+
+
+ .firstpage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.innerFirstpage {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
+  justify-content: center;
+  align-items: center;
+  /* background-color: hsl(0 0% 100% / 1); */
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+/* Styles for mobile devices (default) */
+.calculator,
+.result {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+}
+
+.calculator {
+  background-color: hsl(0 0% 100% / 1);
+  padding: 2rem 1.5rem;
+}
+
+.result {
+  background-color: rgb(19 48 64);
+  padding: 6.8rem !important;
+}
+
+/* Styles for tablets and larger screens */
+@media screen and (min-width: 768px) {
+  .innerFirstpage {
+    width: 80%;
+    flex-direction: row; /* Switch to row layout */
+    padding: 2rem;
+  }
+
+  .calculator,
+  .result {
+    width: 50%; /* Split the space equally */
+    padding: 3rem;
+    margin-bottom: 0;
+  }
+
+  .calculator {
+    border-radius: 1.5rem 0 0 1.5rem;
+  }
+
+  .result {
+    border-radius: 0 1.5rem 1.5rem 0;
+  }
+}
+
+/* Styles for desktop and larger screens */
+@media screen and (min-width: 1024px) {
+  .innerFirstpage {
+    width: 63%;
+  }
+
+  .calculator,
+  .result {
+    padding: 4rem;
+  }
 }
 

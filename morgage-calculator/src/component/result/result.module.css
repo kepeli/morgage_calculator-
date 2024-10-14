@@ -52,6 +52,7 @@
 .resultCoverHeader h1 {
   color: #ffffff;
   text-align: center;
+  text-wrap: nowrap;
 }
 
 .resultCoverContent p{
